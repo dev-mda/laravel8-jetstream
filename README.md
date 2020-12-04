@@ -1,3 +1,48 @@
+## Steps to reproduce
+
+### Install Laravel
+```
+composer create-project --prefer-dist laravel/laravel laravel8-jetstream 
+cd laravel8-jetstream 
+```
+
+### Install Jetstream
+```
+composer require laravel/jetstream
+php artisan jetstream:install livewire --teams
+npm install && npm run dev
+```
+
+### Set SQLite Database
+For testing purposes, you may want to use SQLite instead of MySQL. Edit the `.env` file database section. Comment out all MySQL related variables
+
+```
+#DB_CONNECTION=mysql
+#DB_HOST=127.0.0.1
+#DB_PORT=3306
+#DB_DATABASE=laravel
+#DB_USERNAME=root
+#DB_PASSWORD=
+
+DB_CONNECTION=sqlite
+DB_DATABASE=./database/database.sqlite
+```
+
+Create a empty database file and run the migrate
+```
+touch database/database.sqlite
+php artisan migrate
+```
+
+Serve the plate
+```
+php artisan serve
+```
+
+All done. Happy Laracodding
+
+The original Laravel `README.md` below
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
