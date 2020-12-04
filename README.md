@@ -46,6 +46,16 @@ php artisan serve
 
 All done. Happy Laracodding
 
+Note: You may also want to delete all the git data and work with your own repository
+```
+rm -rf .git
+git init
+git add .
+git commit -m "Initial Commt"
+```
+Something like that. Be creative here 
+
+
 The original Laravel `README.md` below
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
