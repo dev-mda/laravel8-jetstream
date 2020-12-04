@@ -1,4 +1,15 @@
-## Steps to reproduce
+# Laravel + Jetstream
+
+## Quick Start
+Clone the repo and run `setup.sh`
+```
+git clone https://github.com/dev-mda/laravel8-jetstream.git
+cd laravel8-jetstream
+./setup.sh
+php artisan serve
+```
+
+## Manual Install
 
 ### Install Laravel
 ```
@@ -14,18 +25,11 @@ npm install && npm run dev
 ```
 
 ### Set SQLite Database
-For testing purposes, you may want to use SQLite instead of MySQL. Edit the `.env` file database section. Comment out all MySQL related variables
+For testing purposes, you may want to use SQLite instead of MySQL. <br />
+Change `DB_CONNECTION` to `sqlite` in `.env`
 
-```
-#DB_CONNECTION=mysql
-#DB_HOST=127.0.0.1
-#DB_PORT=3306
-#DB_DATABASE=laravel
-#DB_USERNAME=root
-#DB_PASSWORD=
-
-DB_CONNECTION=sqlite
-DB_DATABASE=./database/database.sqlite
+```bash
+sed 's/DB_CONNECTION=mysql/DB_CONNECTION=sqlite/g' .env.example > .env
 ```
 
 Create a empty database file and run the migrate
