@@ -40,6 +40,7 @@ php artisan migrate
 
 Serve the plate
 ```
+php artisan key:generate
 php artisan serve
 ```
 
